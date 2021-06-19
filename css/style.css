@@ -11080,6 +11080,7 @@ section.resume-section {
     padding-bottom: 5rem;
     max-width: 75rem;
     scroll-snap-align: start;
+    scroll-snap-type: proximity;
 }
 
 section.resume-section .resume-section-content {
