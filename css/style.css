@@ -1,16 +1,5 @@
 @charset "UTF-8";
 
-/*!
-* Start Bootstrap - Resume v6.0.2 (https://startbootstrap.com/theme/resume)
-* Copyright 2013-2020 Start Bootstrap
-* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-resume/blob/master/LICENSE)
-*/
-/*!
- * Bootstrap v4.5.3 (https://getbootstrap.com/)
- * Copyright 2011-2020 The Bootstrap Authors
- * Copyright 2011-2020 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
- */
 :root {
     --blue: #007bff;
     --indigo: #6610f2;
@@ -33,6 +22,7 @@
     --danger: #dc3545;
     --light: #f8f9fa;
     --dark: #343a40;
+    --main: #0fc3fa;
     --breakpoint-xs: 0;
     --breakpoint-sm: 576px;
     --breakpoint-md: 768px;
@@ -200,13 +190,13 @@ sup {
 }
 
 a {
-    color: #bd8e38;
+    color: var(--main);
     text-decoration: none;
     background-color: transparent;
 }
 
 a:hover {
-    color: #8f6b2a;
+    color: var(--main);
     text-decoration: underline;
 }
 
@@ -7001,7 +6991,7 @@ a.close.disabled {
 }
 
 .bg-primary {
-    background-color: #bd8e38 !important;
+    background-color: var(--main) !important;
 }
 
 a.bg-primary:hover,
@@ -10735,12 +10725,12 @@ button.bg-dark:focus {
 }
 
 .text-primary {
-    color: #bd8e38 !important;
+    color: var(--main) !important;
 }
 
 a.text-primary:hover,
 a.text-primary:focus {
-    color: #bd8e38 !important;
+    color: var(--main) !important;
 }
 
 .text-secondary {
@@ -11064,7 +11054,7 @@ p.lead {
 }
 
 .social-icons .social-icon:hover {
-    background-color: #bd8e38;
+    background-color: var(--main);
 }
 
 .dev-icons {
