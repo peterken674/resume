@@ -10761,7 +10761,7 @@ a.text-info:focus {
 }
 
 .text-warning {
-    color: #ffc107 !important;
+    color: var(--main) !important;
 }
 
 a.text-warning:hover,
@@ -10986,7 +10986,7 @@ p.lead {
 }
 
 #sideNav .navbar-toggler:focus {
-    outline-color: #d48a6e;
+    outline: none;
 }
 
 @media (min-width: 992px) {
@@ -11069,8 +11069,8 @@ section.resume-section {
     padding-top: 5rem;
     padding-bottom: 5rem;
     max-width: 75rem;
-    scroll-snap-align: start;
-    scroll-snap-type: proximity;
+    /* scroll-snap-align: start;
+    scroll-snap-type: mandatory; */
 }
 
 section.resume-section .resume-section-content {
