@@ -1,6 +1,8 @@
 $(document).ready(function(){
-    $('.nav-link').click(function(){
-        if ($('.navbar-toggler')[0]){}
-        $('.navbar-toggler').trigger('click');
-    });
+    let width = window.innerWidth;
+    if (width <= 991) {
+        $('.nav-link').click(function(){
+            $('.navbar-toggler').trigger('click');
+        });
+    }
 });
