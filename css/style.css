@@ -102,23 +102,23 @@ p {
 }
 
 .dev-icons>li{
-    color: #6c757d;
+    color: #919597;
     transition: all 100ms ease-in-out;
 }
 
 .dev-icons>li:hover {
-    color: #40464b;
+    color: #0fc3fa;
     text-shadow: 2px 2px 5px black;
     transform: scale(1.25,1.25);
-    animation: shake 100ms ease-in-out 2
+    animation: 100ms ease-in-out 2;
 }
-@keyframes shake {
+/* @keyframes shake {
     0%,
     100%
     {transform: rotate(15deg);}
     50%
     {transform: rotate(-15deg);}
-}
+} */
 
 abbr[title],
 abbr[data-original-title] {
