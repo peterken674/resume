@@ -1,16 +1,5 @@
 @charset "UTF-8";
 
-/*!
-* Start Bootstrap - Resume v6.0.2 (https://startbootstrap.com/theme/resume)
-* Copyright 2013-2020 Start Bootstrap
-* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-resume/blob/master/LICENSE)
-*/
-/*!
- * Bootstrap v4.5.3 (https://getbootstrap.com/)
- * Copyright 2011-2020 The Bootstrap Authors
- * Copyright 2011-2020 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
- */
 :root {
     --blue: #007bff;
     --indigo: #6610f2;
@@ -33,6 +22,7 @@
     --danger: #dc3545;
     --light: #f8f9fa;
     --dark: #343a40;
+    --main: #0fc3fa;
     --breakpoint-xs: 0;
     --breakpoint-sm: 576px;
     --breakpoint-md: 768px;
@@ -112,23 +102,23 @@ p {
 }
 
 .dev-icons>li{
-    color: #6c757d;
+    color: #919597;
     transition: all 100ms ease-in-out;
 }
 
 .dev-icons>li:hover {
-    color: #40464b;
+    color: #0fc3fa;
     text-shadow: 2px 2px 5px black;
     transform: scale(1.25,1.25);
-    animation: shake 100ms ease-in-out 2
+    animation: 100ms ease-in-out 2;
 }
-@keyframes shake {
+/* @keyframes shake {
     0%,
     100%
     {transform: rotate(15deg);}
     50%
     {transform: rotate(-15deg);}
-}
+} */
 
 abbr[title],
 abbr[data-original-title] {
@@ -200,13 +190,13 @@ sup {
 }
 
 a {
-    color: #bd8e38;
+    color: var(--main);
     text-decoration: none;
     background-color: transparent;
 }
 
 a:hover {
-    color: #8f6b2a;
+    color: var(--main);
     text-decoration: underline;
 }
 
@@ -4933,17 +4923,19 @@ input[type=button].btn-block {
 }
 
 .navbar-dark .navbar-nav .nav-link {
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, .8);
     transition: 300ms ease-in-out;
 }
 
 .navbar-dark .navbar-nav .nav-link:hover,
 .navbar-dark .navbar-nav .nav-link:focus {
+    font-weight: 900;
     color: rgba(255, 255, 255, 1.0);
+    font-size: 1.2rem;
 }
 
 .navbar-dark .navbar-nav .nav-link.disabled {
-    color: rgba(255, 255, 255, 0.25);
+    color: rgba(255, 255, 255, .4);
 }
 
 .navbar-dark .navbar-nav .show>.nav-link,
@@ -4954,8 +4946,8 @@ input[type=button].btn-block {
 }
 
 .navbar-dark .navbar-toggler {
-    color: rgba(255, 255, 255, 0.5);
-    border-color: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 1) !important;
+    border: none;
 }
 
 .navbar-dark .navbar-toggler-icon {
@@ -7001,7 +6993,7 @@ a.close.disabled {
 }
 
 .bg-primary {
-    background-color: #bd8e38 !important;
+    background-color: var(--main) !important;
 }
 
 a.bg-primary:hover,
@@ -10735,12 +10727,12 @@ button.bg-dark:focus {
 }
 
 .text-primary {
-    color: #bd8e38 !important;
+    color: var(--main) !important;
 }
 
 a.text-primary:hover,
 a.text-primary:focus {
-    color: #bd8e38 !important;
+    color: var(--main) !important;
 }
 
 .text-secondary {
@@ -10771,7 +10763,7 @@ a.text-info:focus {
 }
 
 .text-warning {
-    color: #ffc107 !important;
+    color: var(--main) !important;
 }
 
 a.text-warning:hover,
@@ -10953,7 +10945,7 @@ a.text-dark:focus {
 body {
     padding-top: 3.375rem;
     color: #6c757d;
-    background-color: #F5F5F5;
+    background-color: white;
 }
 
 @media (min-width: 992px) {
@@ -10996,7 +10988,7 @@ p.lead {
 }
 
 #sideNav .navbar-toggler:focus {
-    outline-color: #d48a6e;
+    outline: none;
 }
 
 @media (min-width: 992px) {
@@ -11056,7 +11048,8 @@ p.lead {
     border-radius: 100%;
     font-size: 1.5rem;
     margin-right: 1.5rem;
-    transition: color 300ms linear;
+    margin-bottom: 1rem;
+    transition: 300ms linear;
 }
 
 .social-icons .social-icon:last-child {
@@ -11064,7 +11057,7 @@ p.lead {
 }
 
 .social-icons .social-icon:hover {
-    background-color: #bd8e38;
+    background-color: var(--main);
 }
 
 .dev-icons {
@@ -11079,7 +11072,8 @@ section.resume-section {
     padding-top: 5rem;
     padding-bottom: 5rem;
     max-width: 75rem;
-    scroll-snap-align: start;
+    /* scroll-snap-align: start;
+    scroll-snap-type: mandatory; */
 }
 
 section.resume-section .resume-section-content {
