@@ -6,5 +6,7 @@ $(window).ready(function(){
         });
     }
 
-    $(".loading-page").fadeOut("slow");
+    $("img").ready(function(){
+        $(".loading-page").fadeOut("slow");
+    });
 });
