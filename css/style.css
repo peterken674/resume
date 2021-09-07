@@ -11094,3 +11094,54 @@ section.resume-section .resume-section-content {
         padding-bottom: 5rem;
     }
 }
+
+.loading-page{
+    position: fixed;
+    background-color: var(--main);
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*** LOADERS ***/
+
+/* COMMON ANIMATIONS */
+@keyframes spinBasic {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spinBasicReverse {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes rotateWithBoost {
+    0% {
+        transform: rotate(0deg);
+    }
+    60% {
+        transform: rotate(180deg);
+    }
+    90%,
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.loading-page svg{
+    animation: 1s linear spinBasic infinite;
+}
