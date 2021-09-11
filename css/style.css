@@ -11145,3 +11145,13 @@ section.resume-section .resume-section-content {
 .loading-page svg{
     animation: 1s linear spinBasic infinite;
 }
+
+#particles-js{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    /* background-color: #0fc3fa5d; */
+    z-index: -9999;
+}
