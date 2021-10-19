@@ -11171,3 +11171,49 @@ section.resume-section .resume-section-content {
     /* transform: translateY(0px); */
     opacity: 1 !important;
 }
+
+.back-to-top{
+    position: fixed;
+    top: 90vh;
+    background-color: transparent;
+    margin-left: 90%;
+    border: 1px solid var(--main);
+    color: var(--main);
+    transition: 150ms linear;
+    animation: swing 4s infinite linear;
+    opacity: .6 !important;
+
+}
+.back-to-top:hover{
+    background-color: var(--main);
+    color: var(--white);
+    opacity: 1 !important;
+}
+
+
+@keyframes swing {
+    0% {
+      transform: translateY(0);
+    }
+
+    6.25% {
+        transform: translateY(-1rem);
+      }
+
+    12.5%{
+        transform: translateY(0);
+    }
+
+    18.75%{
+        transform: translateY(-.5rem);
+    }
+  
+    25% {
+      transform: translateY(0);;
+    }
+
+
+    100% {
+        transform: translateY(0);;
+      }
+  }
