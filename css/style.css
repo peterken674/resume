@@ -11217,3 +11217,10 @@ section.resume-section .resume-section-content {
         transform: translateY(0);;
       }
   }
+
+  body::selection {
+    background: yellow; /* WebKit/Blink Browsers */
+  }
+  body::-moz-selection {
+    background: var(--yellow); /* Gecko Browsers */
+  }
