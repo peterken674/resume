@@ -1,14 +1,15 @@
 $(window).ready(function () {
   let width = window.innerWidth;
-  if (width <= 991) {
-    $(".nav-link").click(function () {
-      $(".navbar-toggler").trigger("click");
-    });
-  }
 
-  $("img").ready(function () {
-    $(".loading-page").fadeOut("slow");
+  $(".nav-link").click(function () {
+    $(".navbar-toggler").trigger("click");
   });
+  setTimeout(() => {
+    $("img").ready(function () {
+      $(".loading-page").fadeOut("slow");
+    });
+  }, 1500);
+  
 
   var scroll =
     window.requestAnimationFrame ||
@@ -65,14 +66,35 @@ $(window).ready(function () {
         "translateY(0px)"
       );
     } else {
-        $(".resume-section-content").css("transform", "translateY(100px)");
+      $(".resume-section-content").css("transform", "translateY(100px)");
 
-        $(".resume-section-content.is-visible").css(
-          "transform",
-          "translateY(0px)"
-        );
+      $(".resume-section-content.is-visible").css(
+        "transform",
+        "translateY(0px)"
+      );
     }
 
     previousPosition = currentPosition;
   };
+
+  const btt = $("#backToTop");
+
+  // btt.addEventListener("click", () => gsap.to(window, { scrollTo: 0 }));
+  btt.click(function(){
+    
+  })
+
+
+  gsap.set(btt, { y: 70 });
+
+  gsap.to(btt, {
+    y: 0,
+    autoAlpha: 1,
+    scrollTrigger: {
+      trigger: "body",
+      start: "top -100%",
+      end: "top -20%",
+      toggleActions: "play none reverse none",
+    },
+  });
 });
